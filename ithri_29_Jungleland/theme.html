@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+  <{assign var=theme_name value=$xoTheme->folderName}>	
+  <{assign var=theme_name value=$xoTheme->folderName|cat:'/xotpl'}>
+
+<!-- Title and meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+    <meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+    <title><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{/if}><{$xoops_sitename}></title>
+    <meta name="robots" content="<{$xoops_meta_robots}>" />
+    <meta name="keywords" content="<{$xoops_meta_keywords}>" />
+    <meta name="description" content="<{$xoops_meta_description}>" />
+    <meta name="rating" content="<{$xoops_meta_rating}>" />
+    <meta name="author" content="<{$xoops_meta_author}>" />
+    <meta name="copyright" content="<{$xoops_meta_copyright}>" />
+    <meta name="generator" content="XOOPS" />
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="<{xoAppUrl backend.php}>" />
+	<link rel="shortcut icon" type="image/ico" href="<{xoImgUrl icons/favicon.ico}>" />
+	<link rel="icon" type="image/png" href="<{xoImgUrl icons/icon.png}>" />
+	<link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoAppUrl xoops.css}>" />
+	<link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl css/style.css}>" />
+    <{$xoops_module_header}>
+</head>
+
+
+<body id="<{$xoops_dirname}>" class="<{$xoops_langcode}>">
+
+
+
+	<!-- header1 -->
+	<div id="header">			
+		<h1 id="logo-text"><a href="index.html" title="">Ithri.info</a></h1>		
+		<p id="slogan">Just Another Styleshout CSS Template... </p>					
+		
+		<div  id="nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li id="current"><a href="style.html">Style Demo</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="archives.html">Archives</a></li>
+				<li><a href="index.html">Support</a></li>
+				<li><a href="index.html">About</a></li>		
+			</ul>		
+		</div>		
+		
+		<p id="rss-feed"><a href="index.html" class="feed">Grab the RSS FEEd</a></p>	
+		
+		<form id="quick-search" action="<{xoAppUrl search.php}>" method="get" >
+			<p>
+			<label for="qsearch">Search:</label>
+			<input class="tbox" id="qsearch" type="text" name="qsearch" value="Search..." title="Start typing and hit ENTER" />
+			<input class="btn" alt="Search" type="image" name="searchsubmit" title="Search" src="<{xoImgUrl img/search.png}>" />
+			</p>
+		</form>	
+		</div>   </div>				
+
+  
+  <!-- header  xoops-->
+	<!-- <div id="xo-header" class="<{$xoops_dirname}>"></div>-->  
+		
+<!-- featured -->		
+	<div id="featured">			
+		<div id="featured-block" class="clear">
+			<div id="featured-ribbon"></div>	
+
+			<div class="image-block">
+              <a href="index.html" title=""><img src="<{xoImgUrl img/img-featured.jpg}>" alt="featured" width="350px" height="250px"/></a>
+         </div>			
+				<div class="text-block">
+				<h2><a href="index.html">Read me first</a></h2>
+				<p class="post-info">Posted by <a href="index.html">erwin</a> | Filed under <a href="index.html">templates</a>, <a href="index.html">internet</a></p>
+				<p><strong>JungleLand 1.0</strong> is a free, W3C-compliant, CSS-based website template 
+				by <a href="http://www.styleshout.com/">styleshout.com</a>. This work is 
+				distributed under the <a rel="license" href="http://creativecommons.org/licenses/by/2.5/">
+				Creative Commons Attribution 2.5  License</a>, which means that you are free to 
+				use and modify it for any purpose. All I ask is that you include a link back to  
+				<a href="http://www.styleshout.com/">my website</a> in your credits. For more free designs, you can visit 
+				<a href="http://www.styleshout.com/">my website</a> to see 
+				my other works.
+				</p>
+				<p>Good luck and I hope you find my free templates useful!</p>
+				<p><a href="index.html" class="more-link">Read More</a></p>
+				
+			</div>				
+		</div>		
+	</div>	
+	<div id="featured">
+	 	 
+	  
+  <table  cellspacing="0">
+ 
+    <tr>    
+		  <!-- Start left blocks loop -->
+		  <{if $xoops_showlblock}>
+		  
+			  <td id="xo-canvas-leftcolumn">
+				  <{foreach item=block from=$xoBlocks.canvas_left}>
+					<{includeq file="$theme_name/blockleft.html"}>
+					<{/foreach}>         
+				</td>
+		  <{/if}>
+		 <!-- End left blocks loop -->
+
+
+    <td id="xo-page">     
+		  <!-- Start center top blocks loop -->
+		  <{if $xoBlocks.page_topleft or $xoBlocks.page_topcenter or $xoBlocks.page_topright}>
+		  <table id="xo-topblocks" cellspacing="0">
+		    <!-- Top center blocks -->
+			  <tr>
+				  <td id="xo-topcenterblocks" colspan="2">
+					  <{foreach item=block from=$xoBlocks.page_topcenter}>
+					  <{includeq file="$theme_name/blockcenter_c.html"}>
+					  <{/foreach}>
+					</td>
+			  </tr>
+			  <!-- Top left blocks -->
+		  	<tr>
+					<td id="xo-topleftblocks">
+					  <{foreach item=block from=$xoBlocks.page_topleft}>
+					  <{includeq file="$theme_name/blockcenter_l.html"}>
+					  <{/foreach}>
+					</td>
+				<!-- Top right blocks -->	
+				  <td id="xo-toprightblocks">
+					  <{foreach item=block from=$xoBlocks.page_topright}>
+					  <{includeq file="$theme_name/blockcenter_r.html"}>
+					  <{/foreach}>
+			   </td>
+			 </tr>
+		 </table>
+		 <{/if}>
+		 <!-- End center top blocks loop -->
+
+		 <!-- Start content module page -->
+     <div id="xo-content"><{$xoops_contents}></div>
+		 <!-- End content module -->
+	
+	   <!-- Start center bottom blocks loop -->
+     <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+		 <table id="xo-bottomblocks" cellspacing="0">
+		  <!-- Bottom center blocks -->	
+		  <{if $xoBlocks.page_bottomcenter}>
+		  <tr>
+			  <td id="xo-bottomcenterblocks" colspan="2">
+				<{foreach from=$xoBlocks.page_bottomcenter item=block}>
+				<{include file="$theme_name/blockcenter_c.html"}><{/foreach}>
+				</td>
+		  </tr>
+		  <{/if}>
+		  <!-- Bottom left blocks -->	
+		  <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}>
+		  <tr>
+			  <td id="xo-bottomleftblocks">
+				<{foreach from=$xoBlocks.page_bottomleft item=block}>
+				<{include file="$theme_name/blockcenter_l.html"}>
+				<{/foreach}>
+				</td>
+				<!-- Bottom right blocks -->	
+				<td id="xo-bottomrightblocks">
+				<{foreach from=$xoBlocks.page_bottomright item=block}>
+				<{include file="$theme_name/blockcenter_r.html"}>
+				<{/foreach}>
+				</td>
+		  </tr>
+		  <{/if}>
+		 </table>
+		 <{/if}>
+		 <!-- End center bottom blocks loop -->
+    </td>
+
+      <!-- Start right blocks loop -->
+		  <{if $xoops_showrblock}>
+		  <td id="xo-canvas-rightcolumn">
+        <{foreach item=block from=$xoBlocks.canvas_right}>
+        <{includeq file="$theme_name/blockright.html"}>
+        <{/foreach}>
+		<div id="footer-outer" class="clear"><div id="footer-wrap">
+		<h3>Follow Us</h3>
+			
+			<div class="footer-list">
+				<ul>				
+					<li><a href="index.html" class="rssfeed">RSS Feed</a></li>
+					<li><a href="index.html" class="email">Email</a></li>
+					<li><a href="index.html" class="twitter">Twitter</a></li>									
+				</ul>
+			</div>	
+		  </td>
+		  <{/if}>
+    <!-- End right blocks loop -->
+	
+
+ 
+    </tr>
+  </table>
+  
+<!-- footer-bottom -->		
+		<div id="footer-bottom">
+	
+			<div class="bottom-left">
+				<p>
+				&copy; 2009 <strong>Copyright Info Here</strong>&nbsp; &nbsp; &nbsp;
+				Design by: <a href="http://www.styleshout.com/">styleshout</a>
+                xoopsed by: <a href="http://www.ithri.info/">ithri.info</a> 				
+				</p>
+			</div>		
+	
+			<div class="bottom-right">
+				<p>		
+					<a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | 
+		   		<a href="http://validator.w3.org/check/referer">XHTML</a>	|			
+					<a href="index.html">Home</a> |
+					<strong><a href="#top" class="back-to-top">Back to Top</a></strong>								
+				</p>
+			</div>
+
+		<!-- /footer-bottom -->		
+  </table> 
+</body>
+</html>

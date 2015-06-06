@@ -1,0 +1,112 @@
+/* --------- Left columns --------- */
+#xo-canvas-leftcolumn { 
+	padding: 0px;
+	width : 180px;
+	padding-top:3px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+   
+}
+
+#xo-canvas-leftcolumn h3.xo-blocktitle {border-bottom: 2px solid #3a3a3a;  padding-top:4px;
+    color: #baaca2; 
+	background: url("../img/bg.gif") repeat-x  top;
+    font-size: 1.3em;
+    margin-right:  0px ;
+	text-align: center;
+	font-weight: bold;  
+	padding: 8px;
+	border: 2px solid #000;
+	
+	 
+    
+}
+
+#xo-canvas-leftcolumn .xo-blockcontent { 
+	padding-bottom: 10px;
+	padding-right:2px;
+	border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border: 1px solid #251a14;
+	background-color: #0A0A0A;
+}
+
+
+
+/* --------- Right columns --------- */
+#xo-canvas-rightcolumn {
+	padding: 0px;
+	width : 180px;
+	padding-top:3px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	
+	
+}
+#xo-canvas-rightcolumn h3.xo-blocktitle {
+    background: url("../img/bg.gif") repeat-x  top;
+    padding: 8px;
+	color: #baaca2; 
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+	margin-left:  0px ;
+	border: 2px solid #000;
+	
+}
+#xo-canvas-rightcolumn .xo-blockcontent { 
+	color:#00008B;
+	padding-bottom: 10px;
+	padding-left:0px;
+	border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+	background: #0A0A0A;
+	/*background:  #282828;*/
+}
+
+/* --------- Center blocks --------- */
+#xo-page .xo-block {
+  margin: 8px;
+ background: #0A0A0A;
+
+ 
+ 
+}
+#xo-topcenterblocks, #xo-bottomcenterblocks {}
+#xo-topcenterblocks h3.xo-blocktitle, #xo-bottomcenterblocks h3.xo-blocktitle {
+  padding:4px;
+  padding-left: 4px;
+  color :#66CD00;
+  font-weight: bold;
+  background: url("../img/bg.gif") repeat-x  top;
+  font-size:1.3em;
+  
+}
+#xo-topcenterblocks .xo-blockcontent, #xo-bottomcenterblocks .xo-blockcontent {
+ 
+  margin-bottom: 10px;
+  line-height: 1.3em;
+  text-align: justify;
+  
+}
+#xo-topleftblocks, #xo-bottomleftblocks, #xo-toprightblocks, #xo-bottomrightblocks {width : 49.5%;  border-bottom: ;}
+#xo-topleftblocks h3.xo-blocktitle, #xo-bottomleftblocks h3.xo-blocktitle,
+#xo-toprightblocks h3.xo-blocktitle, #xo-bottomrightblocks h3.xo-blocktitle {
+   padding:4px;
+  padding-left: 4px;
+  color: #66CD00;
+  font-weight: bold;
+  background: url("../img/bg.gif") repeat-x  top;
+  font-size:1.3em;
+   
+  
+}
+#xo-topleftblocks .xo-blockcontent, #xo-toprightblocks .xo-blockcontent,
+#xo-bottomleftblocks .xo-blockcontent, #xo-bottomrightblocks .xo-blockcontent {
+  margin-bottom: 2px;
+  line-height: 1.3em;
+  text-align: justify;
+background: #0A0A0A;  
+}
+
+
+
